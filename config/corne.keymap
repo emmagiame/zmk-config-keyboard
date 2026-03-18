@@ -21,7 +21,7 @@
     &kp C_PP   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT       &kp CARET  &kp AMPS  &kp ASTRK &kp LPAR  &kp RPAR  &kp DEL
     &kp TILDE  &kp C_BRI_UP &kp C_PREV   &kp C_VOL_UP &kp C_NEXT   &trans          &trans     &trans    &trans    &kp LBKT  &kp RBKT  &kp PIPE
     &trans     &kp C_BRI_DN &trans       &kp C_VOL_DN &trans       &trans          &kp EQUAL  &kp PLUS  &kp LBRC  &kp RBRC  &kp COLON &trans
-    &kp CAPS   &bt BT_CLR   &trans       &kp MUTE     &trans       &trans        &kp UNDERSCORE  &kp MINUS &kp LT    &kp GT    &kp QMARK &kp DQT
+    &kp CAPS   &bt BT_CLR   &trans       &kp C_MUTE     &trans       &trans        &kp UNDERSCORE  &kp MINUS &kp LT    &kp GT    &kp QMARK &kp DQT
     &tog 1     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans     &mo 1     &kp HOME  &kp PG_UP &kp PG_DN &kp END
             >;
         };
