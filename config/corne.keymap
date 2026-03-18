@@ -1,0 +1,40 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+// ---------------------------------------------------------------------------------
+// |  ESC |  1  |  2  |  3  |  4  |  5  |     |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |  `   |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U  |  I  |  O  |  P  |  \   |
+// | TAB  |  A  |  S  |  D  |  F  |  G  |     |  H  |  J  |  K  |  L  |  ;  |  ENT |
+// | CAPS |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M  |  ,  |  .  |  /  | APOS |
+// |toglow| CTRL| ALT | CMD |SHIFT| SPC |     | SPC | LOW |LARW |DARW |UARW | RARW |
+                        bindings = <
+   &kp ESC   &kp N1     &kp N2    &kp N3     &kp N4      &kp N5               &kp N6     &kp N7  &kp N8     &kp N9    &kp N0    &kp BSPC
+   &kp GRAVE &kp Q      &kp W     &kp E      &kp R       &kp T                &kp Y      &kp U   &kp I      &kp O     &kp P     &kp BSLH
+   &kp TAB   &kp A      &kp S     &kp D      &kp F       &kp G                &kp H      &kp J   &kp K      &kp L     &kp SEMI  &kp ENTER
+   &caps_word  &kp Z    &kp X     &kp C      &kp V       &kp B                &kp N      &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp APOS
+   &tog 1    &kp LCTRL  &kp LALT  &kp LGUI   &kp LSHFT   &kp SPACE            &kp SPACE  &mo 1   &kp LARW   &kp DARW  &kp UARW  &kp RARW
+                        >;
+                };
+                lower_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |   PP  |   !   |   @   |   #   |   $   |   %   |          |   ^   |   &   |   *   | LPAR  | RPAR  |  DEL  |
+// |   ~   |       | PREV  | VOLUP | NEXT  |       |          |       |       |       | LBKT  | LBKT  |   |   |
+// |       |       |       | VOLDWN|       |       |          |   =   |   +   | LBRC  | RBRC  | COLON |       |
+// |       |       |       | MUTE  |       |       |          |   _   |   -   |   <   |   >   |   ?   |   "   |
+// | BTCLR |  BT1  |  BT2  |  BT3  |  BT4  |  BT5  |          |       |       | HOME  | PG_UP | PG_DN |  END  |      
+                       bindings = <
+   &kp C_PP     &kp EXCL       &kp AT        &kp HASH       &kp DLLR       &kp PRCNT                   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR      &kp DEL
+   &kp TILDE    &kp C_BRI_UP   &kp C_PREV    &kp C_VOL_UP   &kp C_NEXT     &trans                      &trans     &trans     &trans     &kp LBKT   &kp RBKT      &kp PIPE
+   &trans       &kp C_BRI_DN   &trans        &kp C_VOL_DN   &trans         &trans                      &kp EQUAL  &kp PLUS   &kp LBRC   &kp RBRC   &kp COLON     &trans
+   &kp CAPS     &bt BT_CLR     &trans        &kp MUTE       &trans         &trans                      &kp UNDER  &kp MINUS  &kp LT     &kp GT     &kp QUESTION  &kp DQT
+   &tog 1       &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                &trans     &mo 1      &kp HOME   &kp PG_UP  &kp PG_DN     &kp END
+                        >;
+                };
+        };
+};
