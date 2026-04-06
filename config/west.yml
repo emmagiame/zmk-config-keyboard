@@ -2,15 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: christianselig
-      url-base: https://github.com/christianselig
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      import: app/west.yml
-    - name: caldera-keyboard
-      remote: christianselig
-      revision: main
+      import: app/west.yml # THIS IS THE CRUCIAL LINE
   self:
     path: config
