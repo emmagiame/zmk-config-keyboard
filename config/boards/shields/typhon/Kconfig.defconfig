@@ -1,0 +1,6 @@
+if SHIELD_TYPHON_LEFT || SHIELD_TYPHON_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Typhon"
+
+endif
