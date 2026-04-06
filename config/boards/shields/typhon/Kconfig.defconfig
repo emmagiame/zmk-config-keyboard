@@ -1,16 +1,18 @@
-if SHIELD_TYPHON_LEFT
+if SHIELD_TYPHON_LEFT || SHIELD_TYPHON_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "Typhon"
 
-config ZMK_SPLIT_ROLE_CENTRAL
+# This ensures the Bluetooth HID (Keyboard) service is active
+config ZMK_BLE
     default y
-
-endif
-
-if SHIELD_TYPHON_LEFT || SHIELD_TYPHON_RIGHT
 
 config ZMK_SPLIT
     default y
 
+endif
+
+if SHIELD_TYPHON_LEFT
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
 endif
