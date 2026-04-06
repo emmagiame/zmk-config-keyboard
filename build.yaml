@@ -19,7 +19,7 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano         # The '_v2' is gone in Zephyr 4.1
     shield: typhon_left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: typhon_right
